@@ -1,0 +1,80 @@
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: cadetblue;
+}
+.wrapper{
+    background-color: aliceblue;
+    padding: 1em;
+    border-radius:12px;
+    min-width: 300px;
+    font-family: tahoma;
+    margin-top: 0;
+    position: relative;
+    height: 165px;
+    transition:height 0.5s step-start;
+}
+header h1,p{
+    margin: 5px;
+    text-align: center;
+    color: rgb(65, 65, 65);
+}
+header h1{
+    font-size: 18px;
+}
+header p{
+    font-size:12px;
+}
+.qr-form{
+    display: flex;
+    flex-direction:column;
+}
+.qr-form input,button{
+    padding: 10px;
+    margin: 10px;
+}
+.qr-form input{
+    border: 1px solid rgb(65,65,65);
+    border-radius: 4px;
+    /* border: none; */
+    outline: none;
+}
+.qr-form button{
+    border: none;
+    outline: none;
+    background-color:cornflowerblue;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+}
+.qr-form button:hover{
+    transform: scale(1.05);
+}
+
+.qr-image{
+    display: flex;
+    opacity: 0;
+    pointer-events:none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 15px;
+    border: 1px solid rgb(65, 65, 65);
+    padding:10px;
+    transition: opacity 0.4s ease;
+}
+
+.qr-image.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+.qr-image.active::after{
+    content: "click on QR code to download";
+    font-size: 8px;
+    font-style: italic;
+}
+
+
