@@ -1,0 +1,27 @@
+body{
+    background-color:black;
+    height: 100vh;
+    overflow: hidden;
+}
+span{
+    height: 100px;
+    width: 100px;
+    background-image: url('heart-icon.png');
+    position: absolute;
+    background-size: cover;
+    animation: animate 5s linear;
+    pointer-events: none;
+}
+
+@keyframes animate{
+    0%{
+        opacity: 1;
+        filter: hue-rotate(0);
+        transform: translate(-50%,-50%);
+    }
+    100%{
+        opacity: 0;
+        filter: hue-rotate(720deg);
+        transform: translate(-50%,-5000%);
+    }
+}
